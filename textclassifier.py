@@ -25,9 +25,6 @@ X_test_transformed = vector.transform(X_test)
 naivebayes = MultinomialNB()
 naivebayes.fit(X_transformed, y_train)
 
-# Save the model
-with open('model.pkl', 'wb') as f:
-    pickle.dump(naivebayes, f)
 
 # Define the Streamlit app
 st.header('Text Classifier Demo')
