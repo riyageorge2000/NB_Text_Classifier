@@ -6,7 +6,7 @@ import streamlit as st
 import pickle
 
 # Read the dataset
-bbc_text = pd.read_csv(r"D:\STUDY\Sem2\NLP\NLPIR\bbc-text.txt")
+bbc_text = pd.read_csv("bbc-text.txt")
 bbc_text = bbc_text.rename(columns={'text': 'News_Headline'}, inplace=False)
 bbc_text.category = bbc_text.category.map({'tech':0, 'business':1, 'sport':2, 'entertainment':3, 'politics':4})
 
