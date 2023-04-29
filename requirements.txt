@@ -1,1 +1,3 @@
-googletrans
+pandas
+sklearn
+pickle
