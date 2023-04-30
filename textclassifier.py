@@ -33,10 +33,10 @@ with open('model.pkl', 'wb') as f:
 # Define the Streamlit app
 st.header('Text Classifier Demo')
 input_text = st.text_area("Please enter the text", value="")
-if st.button("Check"):
+if st.button("Check Category"):
     input_text_transformed = vector.transform([input_text]).toarray()
     prediction = naivebayes.predict(input_text_transformed)[0]
     prediction_mapping = {0: 'TECH', 1: 'BUSINESS', 2: 'SPORTS', 3: 'ENTERTAINMENT', 4: 'POLITICS'}
     result = prediction_mapping[prediction]
-    st.write(f"Predicted category: {result}")
+    st.write(f"Category: {result}")
 
