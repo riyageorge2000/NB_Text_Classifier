@@ -20,7 +20,7 @@ with open('model.pkl', 'wb') as f:
     pickle.dump(naivebayes, f)
 
 
-st.header('Text Classifier Demo')
+st.header('Text Classifier')
 input_text = st.text_area("Please enter the text", value="")
 if st.button("Check Category"):
     input_text_transformed = vector.transform([input_text]).toarray()
